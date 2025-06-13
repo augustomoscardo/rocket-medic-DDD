@@ -33,33 +33,9 @@ export class Patient {
     this.medicalRecord = new MedicalRecord();
   }
 
-  addAllergy(type) {
-    const allergy = new Allergy(type);
-    this.allergies.push(allergy);
-    console.log(`Allergy ${allergy.type} added to patient ${this.name}.`);
-  }
-
-  addDiagnosis(description) {
-    const diagnosis = new Diagnosis(description);
-    this.medicalRecord.addDiagnosis(diagnosis);
-    console.log(`Diagnosis added to the medical record of patient ${this.name}.`);
-  }
-
   addExam(exam) {
     this.exams.push(exam);
     console.log(`Exam ${exam.type} added with result: ${exam.result}`);
-  }
-
-  addMedication(name, dosage) {
-    const medication = new Medication(name, dosage);
-    this.medicalRecord.addMedication(medication);
-    console.log(`Medication added to the medical record of patient ${this.name}.`);
-  }
-
-  addTreatment(description) {
-    const treatment = new Treatment(description);
-    this.medicalRecord.addTreatment(treatment);
-    console.log(`Treatment added to the medical record of patient ${this.name}.`);
   }
 
   scheduleAppointment(appointment) {
